@@ -22,7 +22,9 @@ childNodes = [text, header, text, main, text, script] => length = 6
 //2 - Determine:
 
 /*
-nodeType => Text Node
+nodeType = 3 => Text Node
+which is the actual text inside the elment
+
 nodeName => #text
 
 the first paragraph is a sibling of the second
