@@ -24,15 +24,15 @@ childNodes = [text, header, text, main, text, script] => length = 6
 /*
 nodeType = 3 => Text Node
 which is the actual text inside the elment
-
+*/
+console.log("nodeType:",document.body.childNodes[0].nodeType,
+            "nodeName:", document.body.childNodes[0].nodeName);
+/*
 nodeName => #text
-
 the first paragraph is a sibling of the second
 */
 
 //Twist:
-
-console.log(childNodes)
 childNodes.forEach(function(val){
     if(val.nodeName=='#text')
         console.log(val);
@@ -54,7 +54,7 @@ let newHeader=document.createElement('h2');
 let newParagraph=document.createElement('p');
 
 newDiv.classList.add('card');
-newDiv.setAttribute('data-role','admin');
+newDiv.dataset.role = "admin";
 
 newHeader.textContent="Access Panel";
 newDiv.appendChild(newHeader);
